@@ -21,7 +21,7 @@ public class PenguinAgent : Agent
     public GameObject regurgitatedFishPrefab;
 
     private PenguinArea penguinArea;
-    new private Rigidbody rigidbody;
+    private Rigidbody rb;
     private GameObject baby;
     private bool isFull; // If true, penguin has a full stomach
 
@@ -44,7 +44,7 @@ public class PenguinAgent : Agent
         base.Initialize();
         penguinArea = GetComponentInParent<PenguinArea>();
         baby = penguinArea.penguinBaby;
-        rigidbody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     /// <summary>
@@ -67,7 +67,7 @@ public class PenguinAgent : Agent
         }
 
         // Apply movement
-        rigidbody.MovePosition(transform.position + transform.forward * forwardAmount * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(transform.position + transform.forward * forwardAmount * moveSpeed * Time.fixedDeltaTime);
         transform.Rotate(transform.up * turnAmount * turnSpeed * Time.fixedDeltaTime);
 
         // Apply a small negative reward to encourage shorter strategies
