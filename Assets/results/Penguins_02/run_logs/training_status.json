@@ -1,0 +1,29 @@
+{
+    "Penguin": {
+        "checkpoints": [
+            {
+                "steps": 141280,
+                "file_path": "results/Penguins_02/Penguin/Penguin-141280.onnx",
+                "reward": null,
+                "creation_time": 1776268662.7056901,
+                "auxillary_file_paths": [
+                    "results/Penguins_02/Penguin/Penguin-141280.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 141280,
+            "file_path": "results/Penguins_02/Penguin.onnx",
+            "reward": null,
+            "creation_time": 1776268662.7056901,
+            "auxillary_file_paths": [
+                "results/Penguins_02/Penguin/Penguin-141280.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2"
+    }
+}
